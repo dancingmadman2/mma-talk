@@ -271,6 +271,7 @@ class _EventDetailsState extends State<EventDetails>
     }
   }
 
+  // fetch the ajax request
   Future<Map<String, dynamic>> loadEventData(int eventId) async {
     try {
       Live event = await fetchJsonData(
