@@ -6,7 +6,7 @@ MMA Talk is an interactive mobile application that keeps MMA fans informed about
 
 <img src="https://github.com/dancingmadman2/mma-talk/assets/88443368/5b7eb1a8-b51c-4bca-8ecf-d2eff730a193" width=33% height=33%>
 
-<img src="https://github.com/dancingmadman2/mma-talk/assets/88443368/0aeae010-a736-4551-985f-00eacc5a1059" width=33% height=33%>
+<img src="https://github.com/dancingmadman2/mma-talk/assets/88443368/101bf552-4bcb-4ecb-9c6d-84f0f2d8f840" width=33% height=33%>
 
 <img src="https://github.com/dancingmadman2/mma_talk/assets/88443368/c09c0743-0912-4778-9250-aa191f9f19bf" width=33% height=33%>
 
