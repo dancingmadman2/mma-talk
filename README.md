@@ -3,16 +3,14 @@
 ## Overview
 MMA Talk is an interactive mobile application that keeps MMA fans informed about upcoming fights, provides detailed fighter stats, and offers real-time chat functionality for each event.
 
-<img src="https://github.com/dancingmadman2/mma_talk/assets/88443368/6d70c810-c4e9-42fd-808a-5dda66cde3bf" width=33% height=33%>
 
+<img src="https://github.com/dancingmadman2/mma-talk/assets/88443368/5b7eb1a8-b51c-4bca-8ecf-d2eff730a193" width=33% height=33%>
 
-<img src="https://github.com/dancingmadman2/mma_talk/assets/88443368/f750e850-72b4-45c7-8719-2e0abaf20505" width=33% height=33%>
-
+<img src="https://github.com/dancingmadman2/mma-talk/assets/88443368/0aeae010-a736-4551-985f-00eacc5a1059" width=33% height=33%>
 
 <img src="https://github.com/dancingmadman2/mma_talk/assets/88443368/c09c0743-0912-4778-9250-aa191f9f19bf" width=33% height=33%>
 
-
-<img src="https://github.com/dancingmadman2/mma_talk/assets/88443368/80367eb9-1719-4716-a592-ceb7a807262c" width=33% height=33%>
+<img src="https://github.com/dancingmadman2/mma-talk/assets/88443368/6b6cdf13-c1c9-4308-a77d-96b070154954" width=33% height=33%>
 
 ## Installation
 
