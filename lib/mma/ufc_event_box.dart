@@ -274,12 +274,16 @@ class _EventBoxState extends State<EventBox> with TickerProviderStateMixin {
             .indexWhere((label) => label.toString().trim().contains(cardValue));
         //Lewis vs Nascimento Ferreira
 
-        if (cardValue.contains('TBD') && undercardIndex == -1) {
+        if (undercardIndex == -1) {
           return 0; // skip the comparison if both are "TBD"
         } else {
           return undercardIndex;
         }
       });
+
+      print(cards);
+
+      //print(cardLengths);
 
       List<int> lengths = [];
       List<int> lengthsPast = [];
@@ -300,25 +304,35 @@ class _EventBoxState extends State<EventBox> with TickerProviderStateMixin {
           8, (index) => titlesPast[index].replaceAll(RegExp(r'[0-9]'), ''));
       List<int> cardLengthsPast = List.generate(
           8,
-          (index) => undercards.indexWhere(
-              (label) => label.toString().trim() == cardsPast[index].trim()));
-
-      headshotsRedPast.removeRange(0, cardLengthsPast[0]);
-      headshotsBluePast.removeRange(0, cardLengthsPast[0]);
+          (index) => undercards.indexWhere((label) =>
+              label.toString().trim().contains(cardsPast[index].trim())));
+      try {
+        print(cardLengthsPast[0]);
+        print(cardLengthsPast);
+        headshotsRedPast.removeRange(0, cardLengthsPast[0]);
+        headshotsBluePast.removeRange(0, cardLengthsPast[0]);
+      } catch (e) {
+        print('YARRAK: $e');
+      }
 
       for (int i = 0; i < cardLengths.length - 1; i++) {
         lengths.add(cardLengths[i + 1] - cardLengths[i]);
       }
+      print(lengths);
       for (int i = 0; i < cardLengthsPast.length - 1; i++) {
         lengthsPast.add(cardLengthsPast[i + 1] - cardLengthsPast[i]);
       }
-
-      final Map<int, List<int>> imagePathMap = Map.fromEntries(
-        List.generate(
-            numberOfEvents,
-            (index) =>
-                MapEntry(index, [cardLengths[index], cardLengths[index]])),
-      );
+      Map<int, List<int>> imagePathMap = {};
+      try {
+        imagePathMap = Map.fromEntries(
+          List.generate(
+              numberOfEvents,
+              (index) =>
+                  MapEntry(index, [cardLengths[index], cardLengths[index]])),
+        );
+      } catch (e) {
+        print('anan: $e');
+      }
 
       final defaultImagePath = [cardLengths[2], cardLengths[2]];
 
@@ -330,13 +344,6 @@ class _EventBoxState extends State<EventBox> with TickerProviderStateMixin {
       imagePathBlue = widget.eventSelection != 0 && imagePath[0] == 0
           ? 'https://i.ibb.co/QvP2m4r/question-mark.png'
           : headshotsBlue[imagePath[1]];
-/*
-      for (int i = 13; i < 30; i++) {
-        print(headshotsBlue[i]);
-      }*/
-      print(headshotsRed.length);
-      print(headshotsBlue.length);
-      print(cardLengths);
 
       Map<String, dynamic> eventbox = {
         'titles': titles,

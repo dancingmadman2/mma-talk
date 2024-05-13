@@ -202,8 +202,8 @@ class _EventBoxPastState extends State<EventBoxPast> {
           1, (index) => titles[index].replaceAll(RegExp(r'[0-9]'), ''));
       List<int> cardLengths = List.generate(
           1,
-          (index) => undercards.indexWhere(
-              (label) => label.toString().trim() == cards[index].trim()));
+          (index) => undercards.indexWhere((label) =>
+              label.toString().trim().contains(cards[index].trim())));
       headshotsRed.removeRange(0, cardLengths[0]);
       headshotsBlue.removeRange(0, cardLengths[0]);
 
