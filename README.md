@@ -16,7 +16,7 @@ MMA Talk is an interactive mobile application that keeps MMA fans informed about
 
 Download the latest release of MMA Talk directly from GitHub:
 Beware it is in alpha, expect bugs.
-[Download MMA Talk APK](https://github.com/dancingmadman2/mma-talk/releases/download/v0.1.0-alpha/app-release.apk)
+[Download MMA Talk APK](https://github.com/dancingmadman2/mma-talk/releases/download/v0.1.1-alpha/app-release.apk)
 
 Please note that you may need to enable "Unknown sources" in your device settings to install the application.
 
