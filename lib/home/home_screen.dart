@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   ListView pastEvents = ListView.builder(
     cacheExtent: 800,
-    itemCount: 8,
+    itemCount: 4,
     itemBuilder: (context, index) {
       return EventBoxPast(eventSelection: index);
     },
@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
           //pastEvents.clear();
           pastEvents = ListView.builder(
             cacheExtent: 800,
-            itemCount: 8,
+            itemCount: 4,
             itemBuilder: (context, index) {
               return EventBoxPast(eventSelection: index);
             },
@@ -170,7 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: MediaQuery.of(context).size.height * 0.77,
                         child: ListView.builder(
                           cacheExtent: 800,
-                          itemCount: 8,
+                          itemCount: 4,
                           itemBuilder: (context, index) {
                             return EventBoxPast(eventSelection: index);
                           },

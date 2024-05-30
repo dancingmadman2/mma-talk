@@ -144,7 +144,7 @@ class _EventBoxState extends State<EventBox> with TickerProviderStateMixin {
           int.parse(numberOfUpcomingEvents!.text.toString().substring(0, 2)) -
               4;
 */
-      const toRemove = 8;
+      const toRemove = 4;
 
       titles = eventNames.map((element) => element.text).toList();
 
@@ -261,8 +261,7 @@ class _EventBoxState extends State<EventBox> with TickerProviderStateMixin {
           (index) => undercards.indexWhere(
               (label) => label.toString().trim() == cards[index].trim()));*/
 
-      int numberOfEvents = 6;
-      int numberOfPastEvents = 8;
+      int numberOfEvents = 4;
 
       List<String> cards = List.generate(numberOfEvents,
           (index) => titles[index].replaceAll(RegExp(r'[0-9]'), ''));
@@ -301,9 +300,9 @@ class _EventBoxState extends State<EventBox> with TickerProviderStateMixin {
       linksPast.removeRange(0, toRemove);
 
       List<String> cardsPast = List.generate(
-          8, (index) => titlesPast[index].replaceAll(RegExp(r'[0-9]'), ''));
+          4, (index) => titlesPast[index].replaceAll(RegExp(r'[0-9]'), ''));
       List<int> cardLengthsPast = List.generate(
-          8,
+          4,
           (index) => undercards.indexWhere((label) =>
               label.toString().trim().contains(cardsPast[index].trim())));
       try {

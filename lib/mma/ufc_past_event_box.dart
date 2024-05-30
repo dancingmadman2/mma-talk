@@ -91,7 +91,7 @@ class _EventBoxPastState extends State<EventBoxPast> {
           int.parse(numberOfUpcomingEvents!.text.toString().substring(0, 2)) -
               4;
 */
-      const toRemove = 8;
+      const toRemove = 4;
 
       for (var element in eventDetails) {
         String text = element.text.replaceAll('\n', '').trim();
