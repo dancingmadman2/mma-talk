@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:html/parser.dart' as html_parser;
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
+import 'package:mma_talk/components/parseLiveJson/secrape.dart';
 
 import 'package:mma_talk/components/styles.dart';
 import 'package:http/http.dart' as http;
@@ -144,7 +145,7 @@ class _EventBoxState extends State<EventBox> with TickerProviderStateMixin {
           int.parse(numberOfUpcomingEvents!.text.toString().substring(0, 2)) -
               4;
 */
-      const toRemove = 4;
+      const toRemove = 3;
 
       titles = eventNames.map((element) => element.text).toList();
 
@@ -299,10 +300,10 @@ class _EventBoxState extends State<EventBox> with TickerProviderStateMixin {
       eventTypesPast.removeRange(0, toRemove);
       linksPast.removeRange(0, toRemove);
 
-      List<String> cardsPast = List.generate(
-          4, (index) => titlesPast[index].replaceAll(RegExp(r'[0-9]'), ''));
+      List<String> cardsPast = List.generate(numberOfEvents,
+          (index) => titlesPast[index].replaceAll(RegExp(r'[0-9]'), ''));
       List<int> cardLengthsPast = List.generate(
-          4,
+          numberOfEvents,
           (index) => undercards.indexWhere((label) =>
               label.toString().trim().contains(cardsPast[index].trim())));
       try {
@@ -311,7 +312,13 @@ class _EventBoxState extends State<EventBox> with TickerProviderStateMixin {
         headshotsRedPast.removeRange(0, cardLengthsPast[0]);
         headshotsBluePast.removeRange(0, cardLengthsPast[0]);
       } catch (e) {
-        print('YARRAK: $e');
+        print('TEST: $e');
+      }
+
+      try {
+        numberOfEvents = cards.length;
+      } catch (e) {
+        numberOfEvents = 0;
       }
 
       for (int i = 0; i < cardLengths.length - 1; i++) {
@@ -330,7 +337,7 @@ class _EventBoxState extends State<EventBox> with TickerProviderStateMixin {
                   MapEntry(index, [cardLengths[index], cardLengths[index]])),
         );
       } catch (e) {
-        print('anan: $e');
+        print('tt: $e');
       }
 
       final defaultImagePath = [cardLengths[2], cardLengths[2]];

@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<String> liveEventNames = [];
 
   List<Widget> upcomingEvents = List.generate(
-      5,
+      3,
       (index) => EventBox(
             eventSelection: index,
           ));
@@ -67,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
         if (selection == 0) {
           upcomingEvents.clear();
           upcomingEvents = List.generate(
-              5,
+              3,
               (index) => EventBox(
                     eventSelection: index,
                   ));
