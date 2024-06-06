@@ -145,7 +145,7 @@ class _EventBoxState extends State<EventBox> with TickerProviderStateMixin {
           int.parse(numberOfUpcomingEvents!.text.toString().substring(0, 2)) -
               4;
 */
-      const toRemove = 3;
+      const toRemove = 8;
 
       titles = eventNames.map((element) => element.text).toList();
 

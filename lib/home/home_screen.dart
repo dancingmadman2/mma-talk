@@ -20,6 +20,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 ValueNotifier<bool> stuckOnWaiting = ValueNotifier(false);
+int _nUpcoming = 4;
+int _nPast = 8;
 
 class _HomeScreenState extends State<HomeScreen> {
   final networkController = Get.find<NetworkController>();
@@ -45,14 +47,14 @@ class _HomeScreenState extends State<HomeScreen> {
   List<String> liveEventNames = [];
 
   List<Widget> upcomingEvents = List.generate(
-      3,
+      _nUpcoming,
       (index) => EventBox(
             eventSelection: index,
           ));
 
   ListView pastEvents = ListView.builder(
     cacheExtent: 800,
-    itemCount: 4,
+    itemCount: _nPast,
     itemBuilder: (context, index) {
       return EventBoxPast(eventSelection: index);
     },
@@ -67,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
         if (selection == 0) {
           upcomingEvents.clear();
           upcomingEvents = List.generate(
-              3,
+              _nUpcoming,
               (index) => EventBox(
                     eventSelection: index,
                   ));
@@ -76,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
           //pastEvents.clear();
           pastEvents = ListView.builder(
             cacheExtent: 800,
-            itemCount: 4,
+            itemCount: _nPast,
             itemBuilder: (context, index) {
               return EventBoxPast(eventSelection: index);
             },
@@ -170,7 +172,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: MediaQuery.of(context).size.height * 0.77,
                         child: ListView.builder(
                           cacheExtent: 800,
-                          itemCount: 4,
+                          itemCount: _nPast,
                           itemBuilder: (context, index) {
                             return EventBoxPast(eventSelection: index);
                           },
