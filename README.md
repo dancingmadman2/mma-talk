@@ -21,7 +21,7 @@ Beware it is in alpha, expect bugs.
 Please note that you may need to enable "Unknown sources" in your device settings to install the application.
 
 ## Info
-Code is not documented nor easy to read since this is an old personal project that i built for fun. <br>
+Code is not documented and not easy to read<br>
 ++ All of the data fetching and parsing is done on the client-side for one time use and is not stored. <br>
 ++ The app might not work as well in some regions due to localization. <br>
 
