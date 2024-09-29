@@ -18,12 +18,11 @@ Download the latest release of MMA Talk directly from GitHub:
 Beware it is in alpha, expect bugs.
 [Download MMA Talk APK](https://github.com/dancingmadman2/mma-talk/releases/download/v0.1.1-alpha/app-release.apk)
 
-Please note that you may need to enable "Unknown sources" in your device settings to install the application.
 
 ## Info
-Code is not documented and not easy to read<br>
 ++ All of the data fetching and parsing is done on the client-side for one time use and is not stored. <br>
 ++ The app might not work as well in some regions due to localization. <br>
+Fyi, this is an old project and code is garbage.<br>
 
 ## Disclaimer
 
